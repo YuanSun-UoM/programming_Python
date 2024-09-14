@@ -1,4 +1,4 @@
-## activate virtual environment
+## 1 activate a virtual environment
 
 - use conda to manage package
 
@@ -34,7 +34,7 @@ conda env export > environment.yml
 
 
 
-### Install python package in my macbook
+### 1.1 Install python package in my macbook
 
 ````
 /opt/homebrew/bin/python3.11 -m pip install seaborn
@@ -45,17 +45,15 @@ conda env export > environment.yml
 /opt/homebrew/bin/python3.11 -m pip install climetlab
 /opt/homebrew/bin/python3.11 -m pip install zarr
 /opt/homebrew/bin/python3.11 -m pip install dask
-
-/usr/bin/python3 -m pip install seaborn
-/usr/bin/python3 -m pip install --upgrade xarray
-
 /opt/homebrew/bin/python3.11 -m pip install xarray
 /opt/homebrew/bin/python3.11 -m pip install netcdf4 scipy rasterio
 
+/usr/bin/python3 -m pip install seaborn
+/usr/bin/python3 -m pip install --upgrade xarray
 /usr/bin/python3 -m pip install statsmodels
 ````
 
-## install packages used in an existing virtual environment
+### 1.2 install packages used in an existing virtual environment
 
 ```
 # archer2 
@@ -173,7 +171,7 @@ axis =1,2 ：压经度纬度，对每个时间求平均值，返回 [time] 矩�
 
 
 
-### matplotlib
+## 4 matplotlib
 
 ```
 import matplotlib.pyplot as plt
@@ -190,12 +188,8 @@ fig.savefig('hete_space.pdf',dpi=600)
 
 - 使用proj = ccrs.PlateCarree(central_longitude=180) 时，地图的横坐标最两端都有0°的label。 如果用proj = ccrs.PlateCarree()，最右端没有0°的label。
 
-## 4 scipy.stats
+## 5 scipy.stats
 
-### **t-test**:
+### **t-test**
 
-https://mp.weixin.qq.com/s/jBgRM_pvMEuZ2-1NqpoePw
-
-
-
-## Read in a number of nc.files
+- https://mp.weixin.qq.com/s/jBgRM_pvMEuZ2-1NqpoePw

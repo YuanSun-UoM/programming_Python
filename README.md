@@ -14,8 +14,12 @@ This repo is used to record Python programming.
 
 ### [ctsm_python_gallery](./1_Python_code/ctsm_python_gallery)
 
+- copy this repo from https://github.com/NCAR/ctsm_python_gallery
+
 ```
 cd 1_Python_code
 git submodule add https://github.com/NCAR/ctsm_python_gallery.git
+cd ctsm_python_gallery
+ls -a
+rm -rf .git
 ```
-
