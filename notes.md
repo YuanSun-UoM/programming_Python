@@ -131,7 +131,7 @@ ImportError: numpy.core.multiarray failed to import
 - 常用于读取netcdf文件
 
 ````
-import xarrary as xr
+import xarray as xr
 ````
 
 
