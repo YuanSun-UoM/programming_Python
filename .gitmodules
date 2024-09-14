@@ -1,0 +1,3 @@
+[submodule "1_Python_code/ctsm_python_gallery"]
+	path = 1_Python_code/ctsm_python_gallery
+	url = https://github.com/NCAR/ctsm_python_gallery.git

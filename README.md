@@ -11,3 +11,11 @@ This repo is used to record Python programming.
 ### [CLM-1Dto2D](./1_Python_code/CLM-1Dto2D)
 
 - [Source](https://github.com/zhonghua-zheng/CLM-1D-to-2D) 
+
+### [ctsm_python_gallery](./1_Python_code/ctsm_python_gallery)
+
+```
+cd 1_Python_code
+git submodule add https://github.com/NCAR/ctsm_python_gallery.git
+```
+
