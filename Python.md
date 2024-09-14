@@ -67,6 +67,8 @@ pip freeze > myvenv_requirements.txt
 # 创建环境后，安装已有环境中的包
 pip install -r myvenv_requirements.txt
 
+# numpy 和某个版本冲突，还是逐个安装吧
+rm -rf myvenv
 ```
 
 ### Error
@@ -103,6 +105,24 @@ ERROR: No matching distribution found for pytest==0.0.0
   ERROR: Failed building wheel for mpi4py
 
 **note**: this error occurs due to Python3.11 do not have longintrepr.h 文件[ref](https://stackoverflow.com/questions/74979674/gensim-install-in-python-3-11-fails-because-of-missing-longintrepr-h-file), update mpi4py version
+
+
+
+**Error4**: when import xarray as xr
+
+ImportError: numpy.core.multiarray failed to import
+
+
+
+**Error5**:
+
+/gws/nopw/j04/duicv/yuansun/my_virtual_env/lib/python3.11/site-packages/xarray/backends/plugins.py:80: RuntimeWarning: Engine 'rasterio' loading failed:
+
+'TlzSpec' object has no attribute '_uninitialized_submodules'
+
+ warnings.warn(f"Engine {name!r} loading failed:\n{ex}", RuntimeWarning)
+
+**solved**: pip install --upgrade xarray rasterio
 
 
 
