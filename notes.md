@@ -142,8 +142,6 @@ import xarray as xr
 import numpy as np
 ```
 
-
-
 ### np.mean()
 
 - summary statistics
@@ -165,7 +163,11 @@ axis =1,2 ：压经度纬度，对每个时间求平均值，返回 [time] 矩�
 
 - Nan grid的加减不会进行，还是nan;
 
+### error
 
+**error1**: The kernel appears to have died. It will restart automatically.
+
+**solved**: import numpy before xarray. [ref](https://blog.csdn.net/Zhe_Lin/article/details/136622575?ops_request_misc=%257B%2522request%255Fid%2522%253A%252219037061-2F83-4986-B632-6B8C35695BCA%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=19037061-2F83-4986-B632-6B8C35695BCA&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-136622575-null-null.142^v100^pc_search_result_base1&utm_term=The%20kernel%20appears%20to%20have%20died.%20It%20will%20restart%20automatically&spm=1018.2226.3001.4187)
 
 ## 3 pandas
 
@@ -188,8 +190,48 @@ fig.savefig('hete_space.pdf',dpi=600)
 
 - 使用proj = ccrs.PlateCarree(central_longitude=180) 时，地图的横坐标最两端都有0°的label。 如果用proj = ccrs.PlateCarree()，最右端没有0°的label。
 
+
+
 ## 5 scipy.stats
 
 ### **t-test**
 
 - https://mp.weixin.qq.com/s/jBgRM_pvMEuZ2-1NqpoePw
+
+
+
+## 6 [xesmf](https://xesmf.readthedocs.io/en/latest/installation.html)
+
+- a regridding package
+- [xesmf github](https://github.com/pangeo-data/xESMF)
+
+
+
+### error
+
+**error1**: ModuleNotFoundError: No module named 'ESMF'
+
+[ref](https://github.com/pangeo-data/xESMF/issues/269) need to set esmfmk path
+
+```
+import os
+from pathlib import Path
+
+if 'ESMFMKFILE' not in os.environ:
+    os.environ['ESMFMKFILE'] = str(Path(os.__file__).parent.parent / 'esmf.mk')
+ 
+import xesmf
+```
+
+**solve2 **: use conda install
+
+```
+# in the archer2
+source /work/n02/n02/yuansun/privatemodules_packages/anaconda/anaconda3/bin/activate
+```
+
+
+
+## 7 [obswx](https://envdes.github.io/obswx/map.html#hadisd-station) 
+
+- A Python package for accessing observational meteorological data.
